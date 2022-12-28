@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LightningComponentBundle xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>55.0</apiVersion>
+    <isExposed>true</isExposed>
+    <masterLabel>Lightning Video Player</masterLabel>
+    <targets>
+        <target>lightning__RecordPage</target>
+        <target>lightningCommunity__Page</target>
+        <target>lightningCommunity__Default</target>
+    </targets>
+    <targetConfigs>
+        <targetConfig targets="lightning__RecordPage">
+            <property name="fieldName" type="String" default="" label="Video Url Field" description="Field on the SObject that contains a valid Embed SRC URL. Tested only with Embed SRC URLs from Youtube, Vimeo and Vidyard." />
+        </targetConfig>
+        <targetConfig targets="lightningCommunity__Default">
+            <property name="recordId" type="String" label="Record Id" default="{!recordId}" description="Record Id for the record with the Video Url within it." />
+            <property name="objectApiName" type="String" label="Object Api Name" />
+            <property name="fieldName" type="String" default="" label="Video Url Field" description="Field on the SObject that contains a valid Embed SRC URL. Tested only with Embed SRC URLs from Youtube, Vimeo and Vidyard." />
+        </targetConfig>
+    </targetConfigs>
+</LightningComponentBundle>
